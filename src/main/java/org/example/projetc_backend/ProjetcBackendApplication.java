@@ -7,10 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ProjetcBackendApplication {
 	public static void main(String[] args) {
-		Dotenv dotenv = Dotenv.configure()
-				.directory(System.getProperty("user.dir"))
-				.load();
-		dotenv.entries().forEach(entry -> System.setProperty(entry.getKey(), entry.getValue()));
+		
 		SpringApplication.run(ProjetcBackendApplication.class, args);
 	}
 }
